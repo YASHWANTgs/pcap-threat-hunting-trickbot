@@ -2,7 +2,7 @@
 
 This project showcases network-level threat hunting using a real-world PCAP dataset. We analyzed DNS and HTTP traffic to identify indicators of TrickBot and Cobalt Strike command-and-control (C2) activity using Wireshark.
 
-## 🕵️ Project Summary
+# Project Summary
 
 - **Objective:** Detect malicious behavior in captured PCAP traffic through DNS, HTTP, and IP pattern analysis.
 - **Tools Used:**  
@@ -57,7 +57,6 @@ This project reflects real-world SOC responsibilities, especially Tier 1–2 rol
 - DNS anomalies  
 - HTTP C2 traffic  
 - IP extraction  
-- MITRE mapping references
 
 
 ---
