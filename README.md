@@ -1,34 +1,23 @@
 # PCAP Threat Hunting: TrickBot & Cobalt Strike Detection
 
-This project showcases network-level threat hunting using a real-world PCAP dataset. We analyzed DNS and HTTP traffic to identify indicators of TrickBot and Cobalt Strike command-and-control (C2) activity using Wireshark.
+This Project demonstrates uses a real world PCAP dataset and its used to network level threat hunting. DNS and HTTP Traffic are analysed to identify indicatord ot Trickbo ans Cobalt Strike command-and-control(C2) with the help of Wireshark.
 
 # Project Summary
-
-- **Objective:** Detect malicious behavior in captured PCAP traffic through DNS, HTTP, and IP pattern analysis.
-- **Tools Used:**  
-  - Wireshark  
-  - MITRE ATT&CK Mapping
+To identify if there is any malicious behaviour in thr PCAP traffic Through DNS,HTTP and IP.
 
 
 # Methodology
+DNS- To specificaly identify suspicious domain with high entropy and uncmmon TLDs.
+HTTP inspection -It is mainly used to filter unsual user-agent strings and known C2 paatterns. Invistigaet mainly for POST requests or encrypted Pyloads
+IP Pivoting - We have extracted IPs and move between HTTP layers where known malware infrastructure are assiocated with falgged IPs.
 
-1. **DNS Analysis:**  
-   - Identified suspicious domain lookups with high entropy and uncommon TLDs.
-   - Cross-referenced domains with VirusTotal.
 
-2. **HTTP Inspection:**  
-   - Filtered for unusual user-agent strings and known C2 patterns.
-   - Looked for large POST requests or encrypted payloads.
 
-3. **IP Pivoting:**  
-   - Extracted IPs and pivoted between DNS and HTTP layers.
-   - Flagged IPs associated with known malware infrastructure.
-
-4. **MITRE Mapping:**  
+4. # MITRE Mapping: 
    - Mapped observed behavior to MITRE techniques:  
-     - `T1071.004`: Application Layer Protocol - DNS  
-     - `T1071.001`: Application Layer Protocol - HTTP  
-     - `T1090`: Proxy Communication
+     - T1071.004: Application Layer Protocol - DNS  
+     - T1071.001: Application Layer Protocol - HTTP  
+     - T1090: Proxy Communication
 
 # Findings
 
@@ -47,11 +36,10 @@ This project showcases network-level threat hunting using a real-world PCAP data
 
 # Relevance
 
-This project reflects real-world SOC responsibilities, especially Tier 1–2 roles requiring network forensics and IOC triage. It demonstrates hands-on ability to hunt threats in raw traffic using open-source tools.
+This project shows real-world SOC actions , especially Tier 1–2 which require network forensics and IOC triage. It shows real world ability to hunt threats in raw traffic using open-source tools.
+ 
 
----
-
-#Screenshots
+# Screenshots are provided as evidence
 
 # Key screenshots are included in the repo:
 - DNS anomalies  
@@ -59,6 +47,4 @@ This project reflects real-world SOC responsibilities, especially Tier 1–2 rol
 - IP extraction  
 
 
----
-
-> This was a short but practical blue-team project focused on extracting actionable insights from PCAP data—an essential skill for modern SOC and threat intel roles.
+This was a short but practical blue-team project which focuses on extracting PCAP data—an essential skill for modern SOC and threat intel roles.
